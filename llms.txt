@@ -1,0 +1,18 @@
+# Francesco Cirillo
+
+> Academic website and open research archive of Francesco Cirillo, legal scholar working on legal theory, constitutional law, digital regulation and neurolaw.
+
+## Research areas
+
+- [Legal Theory and Method](https://francescocirillo.eu/ricerca/legal-theory.html): legal form, validity, Kelsen, legal method and the history of legal thought.
+- [Digital Regulation](https://francescocirillo.eu/ricerca/digital-regulation.html): artificial intelligence, fundamental rights, proportionality and evidence-based regulation.
+- [Neurolaw and Cognitive Liberty](https://francescocirillo.eu/ricerca/neurolaw.html): neuroprivacy, neurorights, cognitive liberty and cognitive manipulation.
+- [Constitutional Transformations](https://francescocirillo.eu/ricerca/constitutional-transformations.html): new rights, future generations, end of life and constitutional change.
+
+## Resources
+
+- [Publications](https://francescocirillo.eu/pubblicazioni.html)
+- [Research map](https://francescocirillo.eu/ricerca.html)
+- [Curriculum vitae](https://francescocirillo.eu/cv.html)
+- [ORCID](https://orcid.org/0000-0002-3343-0969)
+
