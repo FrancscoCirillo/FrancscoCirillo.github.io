@@ -145,6 +145,33 @@ h3 { margin: 0 0 7px; font-size: 1.02rem; }
 .prose { max-width: 680px; }
 .prose h2 { margin-top: 46px; }
 .prose h3 { margin-top: 28px; }
+.publication-group {
+  margin: 28px 0 8px;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.source-notice {
+  max-width: 680px;
+  margin: 28px 0 20px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+}
+.full-text {
+  margin-top: 42px;
+}
+.full-text > h2:first-child {
+  margin-top: 0;
+}
+.full-text .notes {
+  font-size: 0.9rem;
+}
+.full-text a[id] {
+  scroll-margin-top: 96px;
+}
 .back { display: inline-block; margin-bottom: 34px; color: var(--muted); }
 .citations { max-width: none; }
 .citation-box {
