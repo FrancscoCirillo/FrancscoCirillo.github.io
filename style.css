@@ -114,15 +114,34 @@ h3 { margin: 0 0 7px; font-size: 1.02rem; }
 }
 .citation-head h2 { margin: 0; font-size: 1rem; }
 .citation-head button {
-  padding: 6px 10px;
-  border: 1px solid var(--line);
-  background: var(--bg);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 11px;
+  border: 1px solid #cfcfcf;
+  border-radius: 999px;
+  background: transparent;
   color: var(--text);
   font-family: var(--mono);
   font-size: .72rem;
   cursor: pointer;
+  transition: color .15s ease, background-color .15s ease, border-color .15s ease;
 }
-.citation-head button:hover { background: #f5f5f5; }
+.citation-head button::before {
+  content: "⧉";
+  font-size: .86rem;
+  line-height: 1;
+}
+.citation-head button:hover {
+  border-color: var(--text);
+  background: #f7f7f7;
+}
+.citation-head button.is-copied {
+  border-color: var(--text);
+  background: var(--text);
+  color: var(--bg);
+}
+.citation-head button.is-copied::before { content: "✓"; }
 .citation-text p { margin: 0; }
 .citation-text p + p { margin-top: 12px; }
 
