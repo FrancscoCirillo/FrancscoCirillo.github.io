@@ -1,82 +1,100 @@
-:root{
-  --text:#111;
-  --bg:#fff;
-  --muted:0.78;
+:root {
+  --text: #111;
+  --bg: #fff;
+  --muted: #6b6b6b;
+  --line: #dedede;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
-body{
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.65;
-  text-rendering:optimizeLegibility;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+  font-size: 16px;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
-main{
-  max-width:720px;
-  padding:64px 20px;
-  margin:auto;
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
+a:hover { opacity: .65; }
+.shell { max-width: 760px; padding: 0 20px; margin: auto; }
+
+.site-header { padding-top: 36px; }
+.site-header .shell {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+}
+.brand { font-weight: 600; border: 0; }
+.site-nav { display: flex; flex-wrap: wrap; gap: 16px; }
+.site-nav a { border: 0; font-size: .9rem; }
+
+main { padding: 70px 0 96px; }
+.eyebrow, .meta-line, .code, .year, .chip, .card-link, .back {
+  font-family: var(--mono);
+  font-size: .74rem;
+  letter-spacing: .015em;
+}
+.eyebrow { margin: 0 0 14px; color: var(--muted); text-transform: uppercase; }
+h1, h2, h3 { line-height: 1.25; letter-spacing: -.018em; }
+h1 { margin: 0; font-size: clamp(2.15rem, 7vw, 3.35rem); }
+h2 { margin: 0 0 14px; font-size: 1.35rem; }
+h3 { margin: 0 0 7px; font-size: 1.02rem; }
+.lede { max-width: 680px; margin: 24px 0 0; font-size: 1.08rem; }
+.meta-line { margin-top: 24px; color: var(--muted); }
+.rule { margin: 58px 0; border: 0; border-top: 1px solid var(--line); }
+
+.section-head { margin-bottom: 28px; }
+.section-head p { max-width: 650px; margin: 0; color: var(--muted); }
+.grid { border-top: 1px solid var(--line); }
+.card {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  column-gap: 18px;
+  padding: 25px 0;
+  border-bottom: 1px solid var(--line);
+}
+.card .code { grid-row: 1 / span 4; color: var(--muted); }
+.card p { margin: 4px 0 10px; color: var(--muted); }
+.card-link { display: inline-block; width: max-content; }
+.chips { display: flex; flex-wrap: wrap; gap: 7px; margin: 10px 0; }
+.chip { color: var(--muted); }
+.chip::before { content: "#"; }
+
+.publication-list { padding: 0; margin: 0; list-style: none; border-top: 1px solid var(--line); }
+.publication {
+  display: grid;
+  grid-template-columns: 66px minmax(0, 1fr);
+  gap: 18px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+.publication .year { color: var(--muted); }
+.publication h3 { font-weight: 600; }
+.publication p { margin: 5px 0 0; color: var(--muted); font-size: .92rem; }
+.prose { max-width: 680px; }
+.prose h2 { margin-top: 46px; }
+.prose h3 { margin-top: 28px; }
+.back { display: inline-block; margin-bottom: 34px; color: var(--muted); }
+
+.site-footer { padding: 28px 0 42px; color: var(--muted); font-size: .86rem; }
+.site-footer .shell { display: flex; justify-content: space-between; gap: 20px; }
+.site-footer p { margin: 0; }
+
+@media (max-width: 620px) {
+  .site-header .shell, .site-footer .shell { align-items: flex-start; flex-direction: column; }
+  main { padding-top: 52px; }
+  .card { grid-template-columns: 62px minmax(0, 1fr); }
+  .publication { grid-template-columns: 50px minmax(0, 1fr); }
 }
 
-h1{
-  margin:0 0 12px;
-  font-size:2.25rem;
-  letter-spacing:-0.025em;
-  line-height:1.15;
-}
-
-.tag{
-  margin:0 0 32px;
-  opacity:var(--muted);
-}
-
-h2{
-  margin:34px 0 12px;
-  font-size:1.1rem;
-  letter-spacing:-0.01em;
-}
-
-p{
-  margin:14px 0;
-}
-
-ul{
-  padding-left:18px;
-  margin:18px 0;
-}
-
-li{
-  margin:16px 0;
-}
-
-em{
-  opacity:0.9;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-  border-bottom:1px solid currentColor;
-  padding-bottom:1px;
-}
-
-a:hover{
-  opacity:0.75;
-}
-
-nav{
-  margin-top:22px;
-}
-
-nav a{
-  margin-right:14px;
-}
-
-footer{
-  margin-top:84px;
-  font-size:0.95rem;
-  opacity:0.7;
-}
