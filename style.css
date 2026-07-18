@@ -144,6 +144,21 @@ h3 { margin: 0 0 7px; font-size: 1.02rem; }
 .citation-head button.is-copied::before { content: "✓"; }
 .citation-text p { margin: 0; }
 .citation-text p + p { margin-top: 12px; }
+.publication-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0 0; }
+.publication-action {
+  display: inline-block;
+  padding: 8px 13px;
+  border: 1px solid var(--text);
+  font-family: var(--mono);
+  font-size: .74rem;
+}
+.publication-action:hover { background: var(--text); color: var(--bg); opacity: 1; }
+.abstracts { margin-top: 42px; }
+.abstracts section { padding: 24px 0; border-top: 1px solid var(--line); }
+.abstracts h2 { margin-bottom: 12px; font-size: 1rem; }
+.abstracts p { margin: 0; }
+.keywords { margin-top: 12px !important; color: var(--muted); font-size: .9rem; }
+.translation-note { margin-top: 10px !important; color: var(--muted); font-family: var(--mono); font-size: .7rem; }
 
 .site-footer { padding: 28px 0 42px; color: var(--muted); font-size: .86rem; }
 .site-footer .shell { display: flex; justify-content: space-between; gap: 20px; }
