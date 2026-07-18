@@ -52,6 +52,8 @@ h2 { margin: 0 0 14px; font-size: 1.35rem; }
 h3 { margin: 0 0 7px; font-size: 1.02rem; }
 .lede { max-width: 680px; margin: 24px 0 0; font-size: 1.08rem; }
 .meta-line { margin-top: 24px; color: var(--muted); }
+.profile-links { display: flex; flex-wrap: wrap; gap: 14px; margin: 18px 0 0; font-family: var(--mono); font-size: .74rem; }
+.profile-links a { border-bottom-color: var(--line); }
 .rule { margin: 58px 0; border: 0; border-top: 1px solid var(--line); }
 
 .section-head { margin-bottom: 28px; }
