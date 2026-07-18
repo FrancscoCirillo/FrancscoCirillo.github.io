@@ -73,11 +73,24 @@ h3 { margin: 0 0 7px; font-size: 1.02rem; }
 
 .publication-list { padding: 0; margin: 0; list-style: none; border-top: 1px solid var(--line); }
 .publication {
+  position: relative;
   display: grid;
   grid-template-columns: 66px minmax(0, 1fr);
   gap: 18px;
   padding: 22px 0;
   border-bottom: 1px solid var(--line);
+}
+.publication h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.publication:has(h3 a) {
+  cursor: pointer;
+  transition: background-color .15s ease;
+}
+.publication:has(h3 a):hover {
+  background: #fafafa;
 }
 .publication .year { color: var(--muted); }
 .publication h3 { font-weight: 600; }
@@ -97,4 +110,3 @@ h3 { margin: 0 0 7px; font-size: 1.02rem; }
   .card { grid-template-columns: 62px minmax(0, 1fr); }
   .publication { grid-template-columns: 50px minmax(0, 1fr); }
 }
-
