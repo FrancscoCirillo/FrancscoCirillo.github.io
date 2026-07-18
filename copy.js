@@ -27,5 +27,9 @@ document.addEventListener("click", async (event) => {
   }
 
   button.textContent = button.dataset.copied;
-  window.setTimeout(() => { button.textContent = button.dataset.label; }, 1400);
+  button.classList.add("is-copied");
+  window.setTimeout(() => {
+    button.textContent = button.dataset.label;
+    button.classList.remove("is-copied");
+  }, 1400);
 });
