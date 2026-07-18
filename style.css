@@ -145,6 +145,19 @@ h3 { margin: 0 0 7px; font-size: 1.02rem; }
 .prose { max-width: 680px; }
 .prose h2 { margin-top: 46px; }
 .prose h3 { margin-top: 28px; }
+.long-abstract { margin-top: 52px; }
+.long-abstract h2 { scroll-margin-top: 36px; }
+.page-note { color: var(--muted); }
+.abstract-index {
+  display: grid;
+  gap: 7px;
+  margin: 26px 0 48px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: .78rem;
+}
+.abstract-index a { width: fit-content; border-bottom-color: var(--line); }
 .publication-group {
   margin: 28px 0 8px;
   font-family: var(--mono);
