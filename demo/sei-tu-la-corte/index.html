@@ -62,7 +62,7 @@
     .question{border-left:3px solid var(--red);padding:2px 0 2px 20px;margin:28px 0;font-style:italic;font-size:1.17rem;line-height:1.55}
     .choices{display:grid;gap:10px}
     .choice{width:100%;text-align:left;background:rgba(255,255,255,.38);border:1px solid var(--line);padding:18px 52px 18px 20px;cursor:pointer;position:relative;line-height:1.4;transition:.22s}
-    .choice:after{content:"â†’";position:absolute;right:20px;color:var(--red)}
+    .choice:after{content:"→";position:absolute;right:20px;color:var(--red)}
     .choice:hover{background:var(--paper);border-color:var(--red);transform:translateX(4px)}
     .choice[disabled]{cursor:default;opacity:.48;transform:none}
     .choice.selected{opacity:1;background:var(--red);border-color:var(--red);color:white}
@@ -109,24 +109,24 @@
   <div class="progress-wrap" aria-hidden="true"><div class="progress" id="progress"></div></div>
   <div class="shell">
     <header>
-      <div class="brand"><span class="seal">Â§</span><span>Sei tu la Corte</span></div>
-      <div class="edition">Camera di consiglio Â· edizione civile</div>
+      <div class="brand"><span class="seal">§</span><span>Sei tu la Corte</span></div>
+      <div class="edition">Camera di consiglio · edizione civile</div>
     </header>
     <div style="width:min(1180px,calc(100% - 32px));margin:14px auto 0;padding:10px 14px;border:1px solid var(--line);font:11px Arial,sans-serif;line-height:1.5;color:var(--muted)"><strong>GIOCO EDITORIALE</strong> · Casi e profili inventati; nessun valore legale o valutativo. Nessun dato viene trasmesso. <a href="../" style="color:var(--red)">Torna alle demo</a></div><main>
       <section class="screen intro active" id="intro">
         <div>
           <div class="eyebrow">Un esperimento di coscienza costituzionale</div>
           <h1>Sei tu<br>la <em>Corte.</em></h1>
-          <p class="lede">Cinque casi. Nessuna risposta innocua. Decidi dove finisce il potere e dove comincia la libertÃ : alla fine, la sentenza piÃ¹ rivelatrice riguarderÃ  te.</p>
+          <p class="lede">Cinque casi. Nessuna risposta innocua. Decidi dove finisce il potere e dove comincia la libertà: alla fine, la sentenza più rivelatrice riguarderà te.</p>
           <button class="primary" id="start">Entra in camera di consiglio</button>
-          <div class="docket">Tempo stimato: 4 minuti Â· Deliberazioni anonime</div>
+          <div class="docket">Tempo stimato: 4 minuti · Deliberazioni anonime</div>
         </div>
         <div class="scale-stage" aria-label="Bilancia della giustizia animata">
           <div class="scale-halo"></div>
           <div class="scale">
             <div class="pillar"></div>
             <div class="beam"><div class="pan left"><div class="dish"></div></div><div class="pan right"><div class="dish"></div></div></div>
-            <div class="scale-caption">LibertÃ  <span style="margin:0 56px">Â·</span> Potere</div>
+            <div class="scale-caption">Libertà <span style="margin:0 56px">·</span> Potere</div>
           </div>
         </div>
       </section>
@@ -141,7 +141,7 @@
           <div class="verdict" id="verdict" aria-live="polite">
             <div class="verdict-kicker">La tua motivazione</div>
             <p id="reason"></p>
-            <button class="next" id="next">Caso successivo â†’</button>
+            <button class="next" id="next">Caso successivo →</button>
           </div>
         </article>
         <aside class="side">
@@ -150,7 +150,7 @@
             <div class="scale">
               <div class="pillar"></div>
               <div class="beam"><div class="pan left"><div class="dish"></div></div><div class="pan right"><div class="dish"></div></div></div>
-              <div class="scale-caption">Diritti <span style="margin:0 56px">Â·</span> AutoritÃ </div>
+              <div class="scale-caption">Diritti <span style="margin:0 56px">·</span> Autorità</div>
             </div>
           </div>
           <div class="score-mini" id="scoreMini"></div>
@@ -171,62 +171,62 @@
         <aside class="result-side">
           <div class="eyebrow">Postilla dalla cancelleria</div>
           <blockquote id="postilla"></blockquote>
-          <p class="footnote">Questo gioco non misura competenze giuridiche e non riproduce casi reali. Misura qualcosa di piÃ¹ sfuggente: il modo in cui distribuisci il beneficio del dubbio tra individuo e istituzioni.</p>
+          <p class="footnote">Questo gioco non misura competenze giuridiche e non riproduce casi reali. Misura qualcosa di più sfuggente: il modo in cui distribuisci il beneficio del dubbio tra individuo e istituzioni.</p>
         </aside>
       </section>
     </main>
-    <footer><span>Repubblica immaginaria Â· decisioni reali</span><span>Nessun dato lascia questo dispositivo</span></footer>
+    <footer><span>Repubblica immaginaria · decisioni reali</span><span>Nessun dato lascia questo dispositivo</span></footer>
   </div>
   <script>
     const cases = [
       {
-        title:"Il silenzio in piazza", tags:["LibertÃ  di riunione","Ordine pubblico"],
+        title:"Il silenzio in piazza", tags:["Libertà di riunione","Ordine pubblico"],
         facts:"Dopo tre notti di proteste rumorose ma pacifiche, il sindaco vieta per trenta giorni ogni manifestazione nel centro storico. Il provvedimento cita il riposo dei residenti e il rischio, mai verificatosi, di disordini.",
-        question:"Un divieto generale e preventivo puÃ² sacrificare la libertÃ  di riunione per proteggere la quiete pubblica?",
+        question:"Un divieto generale e preventivo può sacrificare la libertà di riunione per proteggere la quiete pubblica?",
         options:[
-          ["Annulla il divieto: servivano limiti mirati, non il silenzio assoluto.","Il divieto colpisce piÃ¹ del necessario. La proporzionalitÃ  impone misure meno restrittive â€” orari, percorsi, limiti acustici â€” prima di comprimere una libertÃ  fondamentale.",{g:3,d:-2,c:2,p:1},-5],
-          ["Conferma il divieto, ma solo per sette giorni e nelle ore notturne.","La tutela del riposo Ã¨ legittima, ma va bilanciata con la libertÃ  di riunione. Ridurre durata e fascia oraria rende la misura piÃ¹ ragionevole e proporzionata.",{g:1,d:1,c:2,p:3},-1],
-          ["Conferma integralmente: il sindaco conosce meglio il territorio.","La scelta valorizza la deferenza verso l'amministrazione. Ãˆ pragmatica, ma accetta una forte compressione preventiva della libertÃ  sulla base di un rischio ancora astratto.",{g:-2,d:3,c:0,p:2},5]
+          ["Annulla il divieto: servivano limiti mirati, non il silenzio assoluto.","Il divieto colpisce più del necessario. La proporzionalità impone misure meno restrittive — orari, percorsi, limiti acustici — prima di comprimere una libertà fondamentale.",{g:3,d:-2,c:2,p:1},-5],
+          ["Conferma il divieto, ma solo per sette giorni e nelle ore notturne.","La tutela del riposo è legittima, ma va bilanciata con la libertà di riunione. Ridurre durata e fascia oraria rende la misura più ragionevole e proporzionata.",{g:1,d:1,c:2,p:3},-1],
+          ["Conferma integralmente: il sindaco conosce meglio il territorio.","La scelta valorizza la deferenza verso l'amministrazione. È pragmatica, ma accetta una forte compressione preventiva della libertà sulla base di un rischio ancora astratto.",{g:-2,d:3,c:0,p:2},5]
         ]
       },
       {
         title:"Il concorso dei residenti", tags:["Uguaglianza","Pubblico impiego"],
-        facts:"Una Regione riserva il 40% dei posti in un concorso sanitario a chi vi risiede da almeno dieci anni. La misura mira a ridurre la fuga di personale, ma esclude candidati piÃ¹ qualificati provenienti da altre aree.",
-        question:"La continuitÃ  del servizio giustifica una preferenza cosÃ¬ forte basata sulla residenza?",
+        facts:"Una Regione riserva il 40% dei posti in un concorso sanitario a chi vi risiede da almeno dieci anni. La misura mira a ridurre la fuga di personale, ma esclude candidati più qualificati provenienti da altre aree.",
+        question:"La continuità del servizio giustifica una preferenza così forte basata sulla residenza?",
         options:[
-          ["Dichiara illegittima la riserva: la residenza non misura il merito.","Una distinzione territoriale cosÃ¬ ampia non Ã¨ ragionevolmente collegata alla competenza. Viola l'uguaglianza quando trasforma un obiettivo organizzativo in un privilegio personale.",{g:3,d:-2,c:3,p:0},-4],
-          ["Salva la misura se la quota scende al 15% e dura due anni.","La deroga all'uguaglianza puÃ² reggere solo se temporanea e contenuta. Ãˆ un compromesso proporzionato tra accesso per merito e continuitÃ  del servizio.",{g:1,d:1,c:2,p:3},0],
-          ["Conferma: la stabilitÃ  degli organici Ã¨ una scelta politica.","La decisione riconosce ampio margine al legislatore regionale. Privilegia l'efficacia attesa, ma richiede fiducia in un criterio â€” la residenza â€” solo indirettamente legato allo scopo.",{g:-2,d:3,c:0,p:2},4]
+          ["Dichiara illegittima la riserva: la residenza non misura il merito.","Una distinzione territoriale così ampia non è ragionevolmente collegata alla competenza. Viola l'uguaglianza quando trasforma un obiettivo organizzativo in un privilegio personale.",{g:3,d:-2,c:3,p:0},-4],
+          ["Salva la misura se la quota scende al 15% e dura due anni.","La deroga all'uguaglianza può reggere solo se temporanea e contenuta. È un compromesso proporzionato tra accesso per merito e continuità del servizio.",{g:1,d:1,c:2,p:3},0],
+          ["Conferma: la stabilità degli organici è una scelta politica.","La decisione riconosce ampio margine al legislatore regionale. Privilegia l'efficacia attesa, ma richiede fiducia in un criterio — la residenza — solo indirettamente legato allo scopo.",{g:-2,d:3,c:0,p:2},4]
         ]
       },
       {
         title:"L'algoritmo sospetto", tags:["Riservatezza","Sicurezza"],
-        facts:"Per prevenire frodi, un ente pubblico usa un algoritmo segreto che assegna un indice di rischio ai beneficiari di sussidi. Chi supera la soglia subisce controlli invasivi, senza conoscere i criteri nÃ© poter correggere dati errati.",
-        question:"L'efficienza dei controlli puÃ² giustificare una decisione automatizzata non conoscibile?",
+        facts:"Per prevenire frodi, un ente pubblico usa un algoritmo segreto che assegna un indice di rischio ai beneficiari di sussidi. Chi supera la soglia subisce controlli invasivi, senza conoscere i criteri né poter correggere dati errati.",
+        question:"L'efficienza dei controlli può giustificare una decisione automatizzata non conoscibile?",
         options:[
-          ["Blocca il sistema finchÃ© criteri e dati non siano contestabili.","Senza trasparenza e contraddittorio, il rischio di trattamenti diseguali diventa incontrollabile. La ragionevolezza richiede che chi subisce il potere possa comprenderlo e confutarlo.",{g:3,d:-2,c:3,p:-1},-5],
-          ["Consenti l'uso, ma imponi revisione umana e audit indipendenti.","La misura conserva l'utilitÃ  dello strumento limitandone l'opacitÃ . Revisione e controllo esterno sono garanzie proporzionate al rischio per uguaglianza e riservatezza.",{g:2,d:1,c:2,p:3},-1],
-          ["Conferma: rivelare i criteri renderebbe i controlli aggirabili.","La prevenzione delle frodi riceve prioritÃ  e l'amministrazione conserva discrezionalitÃ  tecnica. La scelta Ã¨ pragmatica, ma espone la libertÃ  individuale a errori difficili da vedere.",{g:-3,d:3,c:0,p:2},5]
+          ["Blocca il sistema finché criteri e dati non siano contestabili.","Senza trasparenza e contraddittorio, il rischio di trattamenti diseguali diventa incontrollabile. La ragionevolezza richiede che chi subisce il potere possa comprenderlo e confutarlo.",{g:3,d:-2,c:3,p:-1},-5],
+          ["Consenti l'uso, ma imponi revisione umana e audit indipendenti.","La misura conserva l'utilità dello strumento limitandone l'opacità. Revisione e controllo esterno sono garanzie proporzionate al rischio per uguaglianza e riservatezza.",{g:2,d:1,c:2,p:3},-1],
+          ["Conferma: rivelare i criteri renderebbe i controlli aggirabili.","La prevenzione delle frodi riceve priorità e l'amministrazione conserva discrezionalità tecnica. La scelta è pragmatica, ma espone la libertà individuale a errori difficili da vedere.",{g:-3,d:3,c:0,p:2},5]
         ]
       },
       {
         title:"La cura impossibile", tags:["Salute","Risorse pubbliche"],
         facts:"Il servizio sanitario nega un farmaco molto costoso a una paziente con malattia rara: gli studi mostrano un beneficio possibile ma incerto. La stessa spesa finanzierebbe terapie consolidate per centinaia di persone.",
-        question:"Il diritto individuale alla salute prevale quando il beneficio Ã¨ incerto e il costo eccezionale?",
+        question:"Il diritto individuale alla salute prevale quando il beneficio è incerto e il costo eccezionale?",
         options:[
-          ["Ordina la cura: l'incertezza non puÃ² ricadere solo sulla paziente.","La scelta tutela al massimo la persona vulnerabile e rifiuta che la raritÃ  diventi diseguaglianza. Tuttavia sottopone la proporzionalitÃ  a una prova severa sul lato delle risorse collettive.",{g:3,d:-2,c:0,p:-2},-4],
-          ["Impone una valutazione clinica individuale con soglia pubblica e appello.","Una regola trasparente e rivedibile tratta casi simili in modo coerente senza ignorare la singolaritÃ  clinica. Ãˆ ragionevole perchÃ© governa l'incertezza invece di fingere che non esista.",{g:2,d:1,c:3,p:3},0],
-          ["Conferma il diniego: le prioritÃ  sanitarie spettano all'amministrazione.","La decisione tutela la sostenibilitÃ  e riconosce competenza tecnica all'amministrazione. Ãˆ deferente e pragmatica, purchÃ© la prioritÃ  sia applicata con criteri uguali e verificabili.",{g:-2,d:3,c:1,p:3},4]
+          ["Ordina la cura: l'incertezza non può ricadere solo sulla paziente.","La scelta tutela al massimo la persona vulnerabile e rifiuta che la rarità diventi diseguaglianza. Tuttavia sottopone la proporzionalità a una prova severa sul lato delle risorse collettive.",{g:3,d:-2,c:0,p:-2},-4],
+          ["Impone una valutazione clinica individuale con soglia pubblica e appello.","Una regola trasparente e rivedibile tratta casi simili in modo coerente senza ignorare la singolarità clinica. È ragionevole perché governa l'incertezza invece di fingere che non esista.",{g:2,d:1,c:3,p:3},0],
+          ["Conferma il diniego: le priorità sanitarie spettano all'amministrazione.","La decisione tutela la sostenibilità e riconosce competenza tecnica all'amministrazione. È deferente e pragmatica, purché la priorità sia applicata con criteri uguali e verificabili.",{g:-2,d:3,c:1,p:3},4]
         ]
       },
       {
         title:"La memoria del candidato", tags:["Oblio","Informazione"],
-        facts:"Un candidato alle elezioni chiede a un giornale di rimuovere dall'archivio online la notizia di una condanna minore, scontata venticinque anni prima. L'articolo Ã¨ accurato, ma compare per primo cercando il suo nome.",
+        facts:"Un candidato alle elezioni chiede a un giornale di rimuovere dall'archivio online la notizia di una condanna minore, scontata venticinque anni prima. L'articolo è accurato, ma compare per primo cercando il suo nome.",
         question:"Il tempo trascorso trasforma una notizia vera in una lesione sproporzionata della persona?",
         options:[
-          ["Ordina la rimozione: una pena non puÃ² diventare identitÃ  perpetua.","Il trascorrere del tempo rafforza la libertÃ  di ricostruire la propria vita. Ma il ruolo pubblico attuale rende meno lineare il bilanciamento con l'interesse degli elettori.",{g:3,d:-1,c:0,p:-1},-4],
-          ["Mantiene l'articolo, ma impone aggiornamento e minore indicizzazione.","La soluzione preserva la memoria collettiva riducendo l'effetto punitivo dell'algoritmo. Ãˆ un bilanciamento proporzionato tra informazione, dignitÃ  e attualitÃ .",{g:2,d:0,c:3,p:3},0],
-          ["Respinge la richiesta: chi cerca cariche pubbliche accetta lo scrutinio.","La libertÃ  d'informazione e la responsabilitÃ  pubblica prevalgono. La regola Ã¨ coerente e facilmente applicabile, ma concede poco peso al tempo e al reinserimento.",{g:-1,d:2,c:2,p:2},4]
+          ["Ordina la rimozione: una pena non può diventare identità perpetua.","Il trascorrere del tempo rafforza la libertà di ricostruire la propria vita. Ma il ruolo pubblico attuale rende meno lineare il bilanciamento con l'interesse degli elettori.",{g:3,d:-1,c:0,p:-1},-4],
+          ["Mantiene l'articolo, ma impone aggiornamento e minore indicizzazione.","La soluzione preserva la memoria collettiva riducendo l'effetto punitivo dell'algoritmo. È un bilanciamento proporzionato tra informazione, dignità e attualità.",{g:2,d:0,c:3,p:3},0],
+          ["Respinge la richiesta: chi cerca cariche pubbliche accetta lo scrutinio.","La libertà d'informazione e la responsabilità pubblica prevalgono. La regola è coerente e facilmente applicabile, ma concede poco peso al tempo e al reinserimento.",{g:-1,d:2,c:2,p:2},4]
         ]
       }
     ];
@@ -251,29 +251,29 @@
       document.querySelectorAll(".choice").forEach((b,j)=>{b.disabled=true;if(j===i)b.classList.add("selected")});
       Object.entries(choice[2]).forEach(([k,v])=>scores[k]+=v); decisions.push(i); setTilt(tilt+choice[3]);
       $("reason").textContent=choice[1];$("verdict").classList.add("show");$("progress").style.width=`${(current+1)*20}%`;renderMini();
-      $("next").textContent=current===cases.length-1?"Pronuncia il profilo â†’":"Caso successivo â†’";
+      $("next").textContent=current===cases.length-1?"Pronuncia il profilo →":"Caso successivo →";
     }
     function profile(){
       const s=scores, max=Object.keys(s).sort((a,b)=>s[b]-s[a]);
       let title,copy,postilla;
-      if(s.g>=18&&s.p>=17){title="Il proporzionalista inquieto";copy="Diffidi delle soluzioni assolute e chiedi al potere di mostrare le ricevute. Proteggi i diritti, ma preferisci garanzie praticabili alle nobili dichiarazioni senza effetti.";postilla="Â«Ogni martello vede un chiodo. Tu, per fortuna, chiedi prima se bastava un cacciavite.Â»"}
-      else if(s.d>=18&&s.p>=17){title="Il custode deferente";copy="Riconosci alle istituzioni un ampio spazio di manovra, soprattutto quando amministrare significa scegliere tra risorse scarse. Non ami sostituire la tua prudenza a quella di chi governa.";postilla="Â«La toga non Ã¨ un programma elettorale. Ma neppure un mantello dell'invisibilitÃ .Â»"}
-      else if(s.c>=19){title="L'architetto della coerenza";copy="Cerchi regole che possano sopravvivere al caso che le ha generate. Trasparenza, criteri pubblici e situazioni uguali trattate allo stesso modo sono la tua grammatica costituzionale.";postilla="Â«Una buona regola non sa in anticipo a chi farÃ  comodo.Â»"}
-      else if(s.g>=19){title="Il garantista senza sonno";copy="Quando il potere bussa, vuoi vedere il mandato. Dai prioritÃ  alla persona concreta e preferisci rischiare qualche inefficienza piuttosto che normalizzare un'ingiustizia.";postilla="Â«La libertÃ  costa. Di solito, perÃ², il conto della sua assenza arriva piÃ¹ tardi.Â»"}
-      else if(s.p>=19){title="Il realista in ermellino";copy="La Costituzione, per te, deve funzionare anche il lunedÃ¬ mattina. Cerchi rimedi misurati, controllabili e capaci di migliorare davvero le istituzioni senza paralizzarle.";postilla="Â«Fiat iustitia, certo. Ma controlliamo anche gli orari dell'autobus.Â»"}
-      else if(s.d>=17){title="Il legislatore mancato";copy="Hai rispetto per le scelte democratiche e una certa riluttanza a governare dalla panchina. Intervieni solo quando lo squilibrio diventa troppo evidente per chiamarlo discrezionalitÃ .";postilla="Â«La separazione dei poteri Ã¨ anche l'arte di sapere quando non prendere la parola.Â»"}
-      else{title="L'equilibrista repubblicano";copy="Non possiedi una formula unica: cambi passo con il terreno, ma non perdi di vista diritti, conseguenze e qualitÃ  delle ragioni pubbliche. La tua virtÃ¹ Ã¨ il dubbio disciplinato.";postilla="Â«La bilancia perfetta non esiste. Esiste la mano che ammette di tremare.Â»"}
+      if(s.g>=18&&s.p>=17){title="Il proporzionalista inquieto";copy="Diffidi delle soluzioni assolute e chiedi al potere di mostrare le ricevute. Proteggi i diritti, ma preferisci garanzie praticabili alle nobili dichiarazioni senza effetti.";postilla="«Ogni martello vede un chiodo. Tu, per fortuna, chiedi prima se bastava un cacciavite.»"}
+      else if(s.d>=18&&s.p>=17){title="Il custode deferente";copy="Riconosci alle istituzioni un ampio spazio di manovra, soprattutto quando amministrare significa scegliere tra risorse scarse. Non ami sostituire la tua prudenza a quella di chi governa.";postilla="«La toga non è un programma elettorale. Ma neppure un mantello dell'invisibilità.»"}
+      else if(s.c>=19){title="L'architetto della coerenza";copy="Cerchi regole che possano sopravvivere al caso che le ha generate. Trasparenza, criteri pubblici e situazioni uguali trattate allo stesso modo sono la tua grammatica costituzionale.";postilla="«Una buona regola non sa in anticipo a chi farà comodo.»"}
+      else if(s.g>=19){title="Il garantista senza sonno";copy="Quando il potere bussa, vuoi vedere il mandato. Dai priorità alla persona concreta e preferisci rischiare qualche inefficienza piuttosto che normalizzare un'ingiustizia.";postilla="«La libertà costa. Di solito, però, il conto della sua assenza arriva più tardi.»"}
+      else if(s.p>=19){title="Il realista in ermellino";copy="La Costituzione, per te, deve funzionare anche il lunedì mattina. Cerchi rimedi misurati, controllabili e capaci di migliorare davvero le istituzioni senza paralizzarle.";postilla="«Fiat iustitia, certo. Ma controlliamo anche gli orari dell'autobus.»"}
+      else if(s.d>=17){title="Il legislatore mancato";copy="Hai rispetto per le scelte democratiche e una certa riluttanza a governare dalla panchina. Intervieni solo quando lo squilibrio diventa troppo evidente per chiamarlo discrezionalità.";postilla="«La separazione dei poteri è anche l'arte di sapere quando non prendere la parola.»"}
+      else{title="L'equilibrista repubblicano";copy="Non possiedi una formula unica: cambi passo con il terreno, ma non perdi di vista diritti, conseguenze e qualità delle ragioni pubbliche. La tua virtù è il dubbio disciplinato.";postilla="«La bilancia perfetta non esiste. Esiste la mano che ammette di tremare.»"}
       $("profileTitle").textContent=title;$("profileCopy").textContent=copy;$("postilla").textContent=postilla;
       const vals=Object.values(s), peak=Math.max(...vals,25);
       $("bars").innerHTML=Object.entries(dimensions).map(([k,v])=>`<div><div class="bar-head"><span>${v}</span><strong>${Math.max(0,s[k])}</strong></div><div class="track"><div class="fill" data-width="${Math.max(8,s[k]/peak*100)}%"></div></div></div>`).join("");
       show("result");requestAnimationFrame(()=>document.querySelectorAll(".fill").forEach(f=>f.style.width=f.dataset.width));
-      document.title=`${title} â€” Sei tu la Corte`;return title;
+      document.title=`${title} — Sei tu la Corte`;return title;
     }
     $("start").addEventListener("click",()=>{show("caseScreen");renderCase()});
     $("next").addEventListener("click",()=>{if(++current<cases.length)renderCase();else profile()});
     $("restart").addEventListener("click",()=>{current=0;scores={g:10,d:10,c:10,p:10};decisions=[];setTilt(0);$("progress").style.width="0";$("shareNote").textContent="";document.title="Sei tu la Corte";show("intro")});
     $("share").addEventListener("click",async()=>{
-      const text=`Il mio profilo in â€œSei tu la Corteâ€ Ã¨: ${$("profileTitle").textContent}. Garantismo ${scores.g}, deferenza ${scores.d}, coerenza ${scores.c}, pragmatismo ${scores.p}. Tu come giudicheresti?`;
+      const text=`Il mio profilo in “Sei tu la Corte” è: ${$("profileTitle").textContent}. Garantismo ${scores.g}, deferenza ${scores.d}, coerenza ${scores.c}, pragmatismo ${scores.p}. Tu come giudicheresti?`;
       try{
         if(navigator.share)await navigator.share({title:"Sei tu la Corte",text,url:location.href});
         else{await navigator.clipboard.writeText(text);$("shareNote").textContent="Profilo copiato negli appunti."}
