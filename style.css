@@ -316,9 +316,9 @@ h3 { margin: 0 0 7px; font-size: 1.02rem; }
   cursor: pointer;
 }
 .email-copy-row button:hover, .email-copy-row button:focus-visible {
-  border-color: var(--bg);
-  background: var(--bg);
-  color: var(--text);
+  border-color: var(--text);
+  background: var(--text);
+  color: var(--bg);
 }
 .email-copy-row button.is-copied {
   border-color: var(--bg);
@@ -350,32 +350,33 @@ h3 { margin: 0 0 7px; font-size: 1.02rem; }
   flex-direction: column;
   min-height: 350px;
   padding: 26px;
-  border: 1px solid var(--text);
-  background: var(--text);
-  color: var(--bg);
+  border: 1px solid #d8d6d0;
+  border-top: 3px solid var(--text);
+  background: #f4f3ef;
+  color: var(--text);
 }
-.spotlight > .eyebrow { color: #bdbdbd; }
+.spotlight > .eyebrow { color: var(--muted); }
 .spotlight-track { flex: 1; display: flex; }
 .spotlight-slide {
   align-self: center;
   padding: 24px 0;
 }
-.spotlight-slide + .spotlight-slide { border-top: 1px solid #444; }
+.spotlight-slide + .spotlight-slide { border-top: 1px solid var(--line); }
 .spotlight.is-enhanced .spotlight-slide + .spotlight-slide { border-top: 0; }
 .spotlight-slide[hidden] { display: none; }
 .spotlight-label {
   margin: 0 0 12px;
-  color: #bdbdbd;
+  color: var(--muted);
   font-family: var(--mono);
   font-size: .7rem;
   text-transform: uppercase;
 }
 .spotlight h2 { margin-bottom: 12px; font-size: 1.3rem; }
-.spotlight-slide p { margin: 0; color: #d0d0d0; font-size: .92rem; }
+.spotlight-slide p { margin: 0; color: var(--muted); font-size: .92rem; }
 .spotlight-slide a {
   display: inline-block;
   margin-top: 18px;
-  border-bottom-color: #777;
+  border-bottom-color: #aaa;
   font-family: var(--mono);
   font-size: .74rem;
 }
@@ -385,16 +386,16 @@ h3 { margin: 0 0 7px; font-size: 1.02rem; }
   justify-content: space-between;
   gap: 12px;
   padding-top: 18px;
-  border-top: 1px solid #444;
+  border-top: 1px solid #d8d6d0;
 }
 .spotlight.is-enhanced .spotlight-controls { display: flex; }
 .spotlight-controls button {
   width: 34px;
   height: 34px;
-  border: 1px solid #666;
+  border: 1px solid #aaa;
   border-radius: 50%;
   background: transparent;
-  color: var(--bg);
+  color: var(--text);
   cursor: pointer;
 }
 .spotlight-controls button:hover, .spotlight-controls button:focus-visible {
@@ -403,7 +404,7 @@ h3 { margin: 0 0 7px; font-size: 1.02rem; }
   color: var(--text);
 }
 .spotlight-counter {
-  color: #bdbdbd;
+  color: var(--muted);
   font-family: var(--mono);
   font-size: .7rem;
 }
