@@ -350,12 +350,12 @@ h3 { margin: 0 0 7px; font-size: 1.02rem; }
   flex-direction: column;
   min-height: 350px;
   padding: 26px;
-  border: 1px solid #d8d6d0;
-  border-top: 3px solid var(--text);
-  background: #f4f3ef;
+  border: 1px solid var(--text);
+  background: var(--bg);
   color: var(--text);
 }
 .spotlight > .eyebrow { color: var(--muted); }
+.spotlight > .eyebrow::before { content: "> "; color: var(--text); }
 .spotlight-track { flex: 1; display: flex; }
 .spotlight-slide {
   align-self: center;
@@ -376,7 +376,7 @@ h3 { margin: 0 0 7px; font-size: 1.02rem; }
 .spotlight-slide a {
   display: inline-block;
   margin-top: 18px;
-  border-bottom-color: #aaa;
+  border-bottom-color: var(--line);
   font-family: var(--mono);
   font-size: .74rem;
 }
@@ -386,14 +386,14 @@ h3 { margin: 0 0 7px; font-size: 1.02rem; }
   justify-content: space-between;
   gap: 12px;
   padding-top: 18px;
-  border-top: 1px solid #d8d6d0;
+  border-top: 1px solid var(--line);
 }
 .spotlight.is-enhanced .spotlight-controls { display: flex; }
 .spotlight-controls button {
   width: 34px;
   height: 34px;
-  border: 1px solid #aaa;
-  border-radius: 50%;
+  border: 1px solid var(--text);
+  border-radius: 0;
   background: transparent;
   color: var(--text);
   cursor: pointer;
