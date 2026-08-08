@@ -247,6 +247,50 @@ h3 { margin: 0 0 7px; font-size: 1.02rem; }
 .keywords { margin-top: 12px !important; color: var(--muted); font-size: .9rem; }
 .translation-note { margin-top: 10px !important; color: var(--muted); font-family: var(--mono); font-size: .7rem; }
 
+.email-box {
+  margin-top: 32px;
+  padding: 20px;
+  border: 1px solid var(--line);
+}
+.email-box-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+.email-box-head h2 { margin: 0; font-size: 1rem; }
+.email-box-head button {
+  padding: 6px 11px;
+  border: 1px solid #cfcfcf;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  font: .72rem var(--mono);
+  cursor: pointer;
+}
+.email-box-head button:hover, .email-box-head button:focus-visible {
+  border-color: var(--text);
+  background: #f7f7f7;
+}
+.email-box-head button.is-copied {
+  border-color: var(--text);
+  background: var(--text);
+  color: var(--bg);
+}
+.email-address {
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-family: var(--mono);
+  user-select: all;
+}
+.email-copy-status {
+  min-height: 1.4em;
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: .78rem;
+}
+
 .site-footer { padding: 28px 0 42px; color: var(--muted); font-size: .86rem; }
 .site-footer .shell { display: flex; justify-content: space-between; gap: 20px; }
 .site-footer p { margin: 0; }
